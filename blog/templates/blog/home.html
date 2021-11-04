@@ -1,0 +1,7 @@
+{% for blog in all %}
+<hr>
+{{blog.title}}
+{{blog.content|safe}}
+<a href="{% url 'blog:get_blog' blog.id %}">view</a>
+<hr>
+{% endfor %}
